@@ -109,7 +109,6 @@ def show_forecast(latitude=39.7456, longitude=-97.0892, period=0):
           periods[period]['windDirection'])
     print(periods[period]['shortForecast'])
     print(periods[period]['detailedForecast'])
-    print()
 
 
 # Start the program interactively
@@ -126,4 +125,5 @@ if __name__ == '__main__':
         print(key)
         latitude, longitude = my_locations[key]
         show_forecast(latitude, longitude)
+        print()
     input('Press ENTER to Continue: ')
