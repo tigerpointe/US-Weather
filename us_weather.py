@@ -94,7 +94,6 @@ def show_forecast(latitude=39.7456, longitude=-97.0892, period=0):
     """
     grid_id, grid_x, grid_y = get_gridpoints(latitude, longitude)
     periods = get_forecast(grid_id, grid_x, grid_y)
-    print()
     print('Forecast for',
           grid_id,
           periods[period]['name'])
