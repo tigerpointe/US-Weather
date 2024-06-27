@@ -101,9 +101,10 @@ def show_forecast(latitude=39.7456, longitude=-97.0892, period=0):
     print('Temperature:  ',
           periods[period]['temperature'],
           periods[period]['temperatureUnit'])
-    print('Precipitation:',
-          periods[period]['probabilityOfPrecipitation']['value'],
-          '% Probability')
+    if periods[period]['probabilityOfPrecipitation']['value'] is not None:
+        print('Precipitation:',
+              periods[period]['probabilityOfPrecipitation']['value'],
+              '% Probability')
     print('Wind Speed:   ',
           periods[period]['windSpeed'],
           periods[period]['windDirection'])
