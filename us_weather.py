@@ -122,8 +122,8 @@ if __name__ == '__main__':
     }
 
     # Display the forecast data for my selected locations
-    latitude, longitude = my_locations['Cleveland, Ohio']
-    show_forecast(latitude, longitude)
-    latitude, longitude = my_locations['Boston, Massachusetts']
-    show_forecast(latitude, longitude)
+    for key in my_locations.keys():
+        print(key)
+        latitude, longitude = my_locations[key]
+        show_forecast(latitude, longitude)
     input('Press ENTER to Continue: ')
